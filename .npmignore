@@ -3,3 +3,8 @@ npm-debug.log
 .DS_Store
 .idea
 src
+gulpfile.js
+server.js
+webpack.config.js
+webpack.production.js
+index.html
