@@ -16,7 +16,7 @@ gulp.task('make-css', function() {
 
   var mergedStream = merge(scssStream, cssStream)
     .pipe(concat('style.css'))
-    .pipe(gulp.dest('dist/assets'));
+    .pipe(gulp.dest('assets'));
 
   return mergedStream;
 });

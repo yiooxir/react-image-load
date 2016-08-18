@@ -14,8 +14,7 @@ export default class App extends Component {
           width="100"
           height="200"
           rotate={90}
-          src="http://i.telegraph.co.uk/multimedia/archive/03570/potd-grass_3570487k.jpg"
-          headers={{'Access-Control-Allow-Origin': '*'}}
+          src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQQtPiYYqfwdb4-JHHtYjT8mnO42yIpQ1d2o8rz2zE3-ZQOi9y3"
         />
       </div>
     );
