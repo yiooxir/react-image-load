@@ -1,12 +1,13 @@
 {
   "name": "react-image-load",
   "main": "dist/index.js",
-  "version": "1.0.13",
-  "description": "React image loader",
+  "version": "1.0.1",
+  "description": "Provide loading Image just by url and rotate it",
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
     "clear": "rimraf ./dist",
+    "prepublish": "npm version patch && npm run build.lib",
     "build.lib": "npm run clear && babel src -d dist --ignore App.js && gulp make-css"
   },
   "repository": {
@@ -16,10 +17,13 @@
   "keywords": [
     "react",
     "reactjs",
-    "image",
-    "load",
-    "loader",
-    "rotate"
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "edit",
+    "webpack"
   ],
   "author": "Serj Borovikov <spectrs55@gmail.com> (https://github.com/yiooxir)",
   "license": "MIT",
@@ -56,7 +60,7 @@
     "npm": "^3.10.6"
   },
   "peerDependencies": {
-    "react": ">=0.13.0 <0.15.*",
-    "react-dom": ">=0.13.0 <0.15.*"
+    "react": ">=0.13.0 <0.15",
+    "react-dom": ">=0.13.0 <0.15"
   }
 }
