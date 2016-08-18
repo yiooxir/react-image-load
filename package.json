@@ -1,7 +1,7 @@
 {
   "name": "react-boilerplate",
   "main": "lib/index.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Boilerplate for creating ReactJS app or lib.",
   "scripts": {
     "start": "node server.js",
