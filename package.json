@@ -1,8 +1,8 @@
 {
-  "name": "react-boilerplate",
+  "name": "react-image-load",
   "main": "lib/index.js",
   "version": "1.0.2",
-  "description": "Boilerplate for creating ReactJS app or lib.",
+  "description": "React image loader",
   "scripts": {
     "start": "node server.js",
     "lint": "eslint src",
@@ -12,25 +12,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yiooxir/[...rep_name]"
+    "url": "https://github.com/yiooxir/react-image-load"
   },
   "keywords": [
     "react",
     "reactjs",
-    "boilerplate",
-    "hot",
-    "reload",
-    "hmr",
-    "live",
-    "edit",
-    "webpack"
+    "image",
+    "load",
+    "loader",
+    "rotate"
   ],
   "author": "Serj Borovikov <spectrs55@gmail.com> (https://github.com/yiooxir)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yiooxir/[...rep_name]/issues"
+    "url": "https://github.com/yiooxir/react-image-load/issues"
   },
-  "homepage": "https://github.com/yiooxir/[...rep_name]",
+  "homepage": "https://github.com/yiooxir/react-image-load",
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "babel-cli": "^6.11.4",
