@@ -7,7 +7,6 @@
     "start": "node server.js",
     "lint": "eslint src",
     "clear": "rimraf ./dist",
-    "publish": "npm version patch && npm run build.lib && npm publish",
     "build.lib": "npm run clear && babel src -d dist --ignore App.js && gulp make-css"
   },
   "repository": {
