@@ -52,11 +52,11 @@ export default class SlidePreview extends Component {
   }
 
   fetchBlob(props) {
-    const promise = fetch(props.src, {
+    this.promise = fetch(props.src, {
       headers: props.headers
     });
 
-    const cancelablePromise = makeCancelable(promise);
+    const cancelablePromise = makeCancelable(this.promise);
 
     cancelablePromise
       .then(response => response.blob())
