@@ -1,7 +1,7 @@
 {
   "name": "react-image-load",
   "main": "lib/index.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React image loader",
   "scripts": {
     "start": "node server.js",
