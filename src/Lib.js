@@ -6,7 +6,7 @@ export default class SlidePreview extends Component {
   static viewport = [
     PropTypes.string,
     PropTypes.number
-    ]
+    ];
 
   static propTypes = {
     src: PropTypes.string,
@@ -15,13 +15,19 @@ export default class SlidePreview extends Component {
     height: PropTypes.oneOfType(SlidePreview.viewport),
     rotate: PropTypes.oneOf([0, 90, 180, 270]),
     className: PropTypes.string,
-    transform: PropTypes.bool
+    transform: PropTypes.bool,
+    onLoading: PropTypes.func,
+    onLoad: PropTypes.func,
+    onFail: PropTypes.func
   };
 
   static defaultProps = {
     className: '',
     transform: true,
-  }
+    onLoading: () => {},
+    onLoad: () => {},
+    onFail: () => {},
+  };
 
   state = {
     src: '',
@@ -52,17 +58,19 @@ export default class SlidePreview extends Component {
   }
 
   fetchBlob(props) {
+    const { onLoading, onFail } = this.props;
     this.promise = fetch(props.src, {
       headers: props.headers
     });
 
     const cancelablePromise = makeCancelable(this.promise);
+    onLoading();
 
     cancelablePromise
       .then(response => response.blob())
       .then(blob => URL.createObjectURL(blob))
       .then(src => this.setState({ src }))
-      .catch(() => {});
+      .catch(onFail);
 
     return cancelablePromise;
   }

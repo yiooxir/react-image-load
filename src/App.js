@@ -15,6 +15,9 @@ export default class App extends Component {
           height="200"
           rotate={90}
           src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQQtPiYYqfwdb4-JHHtYjT8mnO42yIpQ1d2o8rz2zE3-ZQOi9y3"
+          onLoading={() => console.log('on loading')}
+          onLoad={() => console.log('on load')}
+          onFail={(err) => console.log('on fail', err)}
         />
       </div>
     );
