@@ -41,7 +41,7 @@ export default class SlidePreview extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { src, headers } = this.props;
-    if (src !== nextProps.src || headers !== nextProps.headers) {
+    if (src !== nextProps.src) {
       if (this.promise) {
         this.promise.cancel();
       }
